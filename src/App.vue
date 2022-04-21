@@ -7,6 +7,7 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 import hc_home from './components/PaymentServices.vue'
+//import PopuModal from './components/TestFigma.vue'
 
 export default {
   name: 'App',

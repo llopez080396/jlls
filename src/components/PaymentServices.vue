@@ -47,11 +47,39 @@
 
                 <div id="s3_target" class="container-fluid position-absolute">
                     <div class="row h-100">
-                        <div class="col-12 d-flex justify-content-center align-items-center h-100 p-5">
+                        <div class="col-6 d-flex justify-content-center align-items-center h-100 p-5">
                             
                             <div class="w-100 p-0 p-xl-5">
 
-                                <div class="row d-flex justify-content-center align-items-center">
+                                <div class="row d-flex justify-content-left align-items-center">
+                                    <div class="text-center" style="max-width: 680px;">
+                                        <div class="d-none d-md-flex justify-content-center align-items-center mb-3">
+                                            <div style="max-width: 400px">
+                                                <img :src="s3_img2" class="img-fluid">    
+                                            </div>
+                                        </div>
+
+                                        <span class="d-flex d-md-none hc--title-sm poppins-bold text-white">
+                                            PROGRAMA DE APOYO <br class="d-none d-sm-flex">
+                                            DE BENEFICIO SOCIAL
+                                        </span>
+
+                                        <div class="mt-2 mt-xl-5">
+                                            <button @click="redirect('login')" class="btn btn-success mx-1">
+                                                PAGAR
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="col-6 d-flex justify-content-center align-items-center h-100 p-5">
+                            
+                            <div class="w-100 p-0 p-xl-5">
+
+                                <div class="row d-flex justify-content-left align-items-center">
                                     <div class="text-center" style="max-width: 680px;">
                                         <div class="d-none d-md-flex justify-content-center align-items-center mb-3">
                                             <div style="max-width: 400px">
