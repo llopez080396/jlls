@@ -1,24 +1,23 @@
 <template>
   <div id="app">
     <Home/>
-    <Carousel2/>
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
- import hc_home from './components/PaymentServices.vue'
+ import hc_home from './views/PaymentServices.vue'
 //import CarouselGood from './components/CarouselBoot.vue'
- import PruebaPagoAsd from './components/carruselVue.vue'
+ //import PruebaPagoAsd from './components/carruselVue.vue'
 //import CarouselSplide  from './components/CarouselSplide.vue'
 
 export default {
   name: 'App',
   components: {
     //HelloWorld,
-    Home:hc_home,
+    Home:hc_home
    // Carousel:CarouselGood,
-    Carousel2:PruebaPagoAsd
+   // Carousel2:PruebaPagoAsd
   }
 }
 </script>
