@@ -170,6 +170,13 @@
                     </div>
                 </div>
         </section>
+        <section>
+            <ssr-carousel :slides-per-page="2">
+            <div v-for="item in data_table" :key="item.id" class="slide">
+                <img v-bind:src="item.imagen" :alt="item.descripcion" class="asd"/>
+            </div>
+            </ssr-carousel>
+        </section>
         
 </div>
 </template>
@@ -198,7 +205,8 @@
                 gif_simb_white,
                 s3_img1,
                 s3_img2,
-               Carrousel: PruebaPagoAsd
+               Carrousel: PruebaPagoAsd,
+                data_table: []
 			}
 		},
         computed: {
@@ -208,13 +216,15 @@
         },
         methods: {
         redirect(name_route) {
-                if(this.current_route_name !== name_route ) {
-                    window.scrollTo(0, 0)
+                // if(this.current_route_name !== name_route ) {
+                //     window.scrollTo(0, 0)
 
-                    this.$router.push({
-                        name: name_route
-                    })
-                }
+                //     this.$router.push({
+                //         name: name_route
+                //     })
+                // }
+                console.log(name_route)
+                console.log(this.current_route_name);
             }
         },
         created() {
@@ -226,6 +236,14 @@
                 let s3_width = $('#section3').width()
                 $("#s3_target").css("height", s3_height)
                 $("#s3_target").css("width", s3_width)
+            })
+            fetch('http://localhost:3000/services').then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(async response => {
+                if(response.length > 0) {
+                    this.data_table = response
+                    //console.log(response)
+                }
             })
         },
         mounted() {
