@@ -8,12 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@splidejs/vue-splide": "^0.6.3",
     "@vue/cli": "^5.0.4",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
     "jquery": "^3.6.0",
     "sass-loader": "^12.6.0",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-ssr-carousel": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
